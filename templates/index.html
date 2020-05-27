@@ -12,6 +12,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/mainStyle.css" />
+    <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css" />
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -20,16 +21,27 @@
         <a href="#">upgrade your browser</a> to improve your experience.
       </p>
     <![endif]-->
-    <div class="baseDiv wrapperDiv">
-      <div class="wingDiv"></div>
-      <div class="centerDiv">
+
+    <div class="jumbtron">
+      <div class="container">
         <h1>Cat's Bird Camera</h1>
-        <button id="photoBtn">Take Photo</button>
       </div>
-      <div class="wingDiv"></div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 centerDiv">
+          <button id="photoBtn" type="button" class="btn btn-primary">
+            Take Photo
+          </button>
+        </div>
+        <div class="col-3"></div>
+      </div>
     </div>
 
     <script src="" async defer></script>
+    <script src="./css/bootstrap/js/bootstrap.min.js"></script>
     <script>
       document
         .getElementById("photoBtn")

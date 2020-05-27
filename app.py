@@ -13,5 +13,6 @@ def takeStill():
     return render_template('index.html')
 
 # make externally visible
+# doesn't appear to do anything have to launch as flask run --host=0.0.0.0
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0')

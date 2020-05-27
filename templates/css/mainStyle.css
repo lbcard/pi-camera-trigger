@@ -1,4 +1,4 @@
-.wrapperDiv {
+/* .wrapperDiv {
   width: 100%;
 }
 
@@ -10,8 +10,8 @@
 
 .wingDiv {
   width: 30%;
-}
+} */
 
 .centerDiv {
-  width: 70%;
+  text-align: center;
 }
