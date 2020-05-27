@@ -5,6 +5,8 @@ cd ~/Desktop/cam-trigger/pi-camera-trigger
 
 # start the webserver
 
+
+
 # check stuff
 
 
@@ -18,3 +20,5 @@ mkdir
 source ~/Desktop/cam-trigger/pi-camera-trigger-env/bin/activate
 cd ~/Desktop/cam-trigger/pi-camera-trigger
 pip3 install flask
+# maybe set bashrc bashprofile
+export FLASK_APP=app.py
