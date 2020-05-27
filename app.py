@@ -4,8 +4,9 @@ import camCommands
 app = Flask(__name__)
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+    return "Hello World"
+#def index():
+#    return render_template('index.html')
 
 @app.route('/takeStill')
 def takeStill():
