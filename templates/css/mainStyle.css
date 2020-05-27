@@ -1,0 +1,17 @@
+.wrapperDiv {
+  width: 100%;
+}
+
+.baseDiv {
+  padding: 0;
+  margin: 0;
+  height: auto;
+}
+
+.wingDiv {
+  width: 30%;
+}
+
+.centerDiv {
+  width: 70%;
+}
