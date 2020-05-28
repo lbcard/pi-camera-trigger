@@ -72,12 +72,12 @@
       //   xhttp.send();
       // }
 
-      function messageClass(varMessage) {
-        if (varMessage === "Photo Taken") {
+      function messageClass(varResponse) {
+        if (varResponse === "Photo Taken") {
           document.getElementById("photoResponse").style.display = "visible";
           document.getElementById("photoResponse").className +=
             " alert-success";
-        } else if (varMessage === "Photo Failed") {
+        } else if (varResponse === "Photo Failed") {
           document.getElementById("photoResponse").style.display = "visible";
           document.getElementById("photoResponse").className += " alert-danger";
         } else {
@@ -85,7 +85,7 @@
         }
       }
 
-      messageClass(message);
+      messageClass(response);
     </script>
   </body>
 </html>

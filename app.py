@@ -5,13 +5,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', message="")
+    return render_template('index.html', response="", message="")
 
 @app.route('/takeStill')
 def takeStill():
     print ("take still triggered")
     photoResult = camCommands.photo()
-    return render_template('index.html', message=photoResult)
+    return render_template('index.html', response="Photo Taken", message=photoResult)
 
 # make externally visible
 # doesn't appear to do anything have to launch as flask run --host=0.0.0.0
