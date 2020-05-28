@@ -38,9 +38,14 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6 centerDiv">
-          <button id="photoBtn" type="button" class="btn btn-primary">
+          <a
+            href="/takeStill"
+            id="photoBtn"
+            type="button"
+            class="btn btn-primary"
+          >
             Take Photo
-          </button>
+          </a>
 
           <div id="photoResponse" class="alert alert-success" role="alert">
             {{ message }}
@@ -57,13 +62,13 @@
         .getElementById("photoBtn")
         .addEventListener("click", triggerPhoto);
 
-      function triggerPhoto() {
-        var xhttp = new XMLHttpRequest();
+      // function triggerPhoto() {
+      //   var xhttp = new XMLHttpRequest();
 
-        // xhttp.open("GET", "localhost:5000/takeStill", true);
-        xhttp.open("GET", "/takeStill", true);
-        xhttp.send();
-      }
+      //   // xhttp.open("GET", "localhost:5000/takeStill", true);
+      //   xhttp.open("GET", "/takeStill", true);
+      //   xhttp.send();
+      // }
 
       function messageClass(varMessage) {
         if (varMessage === "Photo Taken") {
