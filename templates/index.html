@@ -47,7 +47,9 @@
             Take Photo
           </a>
 
-          <div id="photoResponse" class="alert alert-success" role="alert">
+          <br />
+
+          <div id="photoResponse" class="alert" role="alert">
             {{ message }}
           </div>
         </div>
@@ -71,9 +73,11 @@
 
       function messageClass(varMessage) {
         if (varMessage === "Photo Taken") {
+          document.getElementById("photoResponse").style.display = "visible";
           document.getElementById("photoResponse").className +=
             " alert-success";
         } else if (varMessage === "Photo Failed") {
+          document.getElementById("photoResponse").style.display = "visible";
           document.getElementById("photoResponse").className += " alert-danger";
         } else {
           document.getElementById("photoResponse").style.display = "none";
