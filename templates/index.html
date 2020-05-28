@@ -41,6 +41,10 @@
           <button id="photoBtn" type="button" class="btn btn-primary">
             Take Photo
           </button>
+
+          <div id="photoResponse" class="alert alert-success" role="alert">
+            {{ message }}
+          </div>
         </div>
         <div class="col-3"></div>
       </div>
@@ -56,9 +60,22 @@
       function triggerPhoto() {
         var xhttp = new XMLHttpRequest();
 
-        xhttp.open("GET", "localhost:5000/takeStill", true);
+        xhttp.open("GET", "127.0.0.1:5000/takeStill", true);
         xhttp.send();
       }
+
+      function messageClass(varMessage) {
+        if (varMessage === "Photo Taken") {
+          document.getElementById("photoResponse").className +=
+            " alert-success";
+        } else if (varMessage === "Photo Failed") {
+          document.getElementById("photoResponse").className += " alert-danger";
+        } else {
+          document.getElementById("photoResponse").style.display = "none";
+        }
+      }
+
+      messageClass(message);
     </script>
   </body>
 </html>

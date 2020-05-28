@@ -9,8 +9,9 @@ def index():
 
 @app.route('/takeStill')
 def takeStill():
-    camCommands.photo()
-    return render_template('index.html')
+    print "take still triggered"
+    photoResult = camCommands.photo()
+    return render_template('index.html', message=photoResult)
 
 # make externally visible
 # doesn't appear to do anything have to launch as flask run --host=0.0.0.0
