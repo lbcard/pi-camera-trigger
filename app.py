@@ -9,7 +9,7 @@ def index():
 
 @app.route('/takeStill')
 def takeStill():
-    print "take still triggered"
+    print ("take still triggered")
     photoResult = camCommands.photo()
     return render_template('index.html', message=photoResult)
 
