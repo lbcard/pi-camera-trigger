@@ -54,7 +54,7 @@
             {{ message }}
           </div>
 
-          <div id="imageGallery"><ul id="galleryList"></ul></div>
+          <div id="imageGallery"><ul class="galleryList"></ul></div>
         </div>
         <div class="col-3"></div>
       </div>
@@ -123,9 +123,11 @@
             gallery.innerHTML +=
               "<li><a href='" +
               mainImageDir +
+              "/" +
               image +
               "'><img class='galleryImg' src='" +
               dir +
+              "/" +
               image +
               "'></a></li>";
           }
