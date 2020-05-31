@@ -15,7 +15,7 @@ def index():
 def takeStill():
     print("take still triggered")
     photoResult = camCommands.photo()
-    imageList = os.listdir('./static/images/')
+    imageList = listdir('./static/images/')
     return render_template('index.html', response="Photo Taken", message=photoResult, images=imageList)
 
 
