@@ -5,7 +5,7 @@ import time
 vidsDir = "~/Desktop/cameraVids/"
 
 def photo():
-    stillsDir = "~/Desktop/cameraShots/"
+    stillsDir = "./images/"
     epoch_time = int(time.time())
     # takeStill = subprocess.run(["raspistill", "-o %s%d.jpg" % (stillsDir, epoch_time)])
     takeStill = os.system("raspistill -o %s%d.jpg" % (stillsDir, epoch_time))
