@@ -110,11 +110,13 @@
         //   },
         // });
 
-        var imageFiles = "{{ images | tojson }}";
+        var imageFiles = "{{ images }}";
         // images.forEach( image => {
         //   $("body").append("<img src='" + dir + filename + "'>");
         // })
 
+        console.log("imageFiles");
+        console.log(imageFiles);
         $(imageFiles)
           .find("a:contains(" + fileextension + ")")
           .each(function () {
