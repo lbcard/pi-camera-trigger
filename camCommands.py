@@ -22,11 +22,11 @@ def photo():
 # takeVid = subprocess.run(["raspistill", "-o stillsDir%d.jpg" % epoch_time])
 
 
-def createProxy(inputImage, dir):
+def createProxy(inputImage, directory):
     basewidth = 300
-    img = Image.open(inputImage)
+    img = Image.open(directory + inputImage)
     wpercent = (basewidth/float(img.size[0]))
     hsize = int((float(img.size[1])*float(wpercent)))
     img = img.resize((basewidth, hsize), Image.ANTIALIAS)
     inputImageName = inputImage[:-4]
-    img.save(dir + "/" + inputImageName + "_small" + ".jpg")
+    img.save(directory + "/imageProxies/" + inputImageName + "_small" + ".jpg")
