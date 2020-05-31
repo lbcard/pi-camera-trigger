@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    imageList = helperFuncs.getFiles('./static/images/')
+    imageList = helperFuncs.getFiles('./static/images/imageProxies')
     return render_template('index.html', response="", message="", images=imageList)
 
 
