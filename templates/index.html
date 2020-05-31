@@ -117,7 +117,7 @@
 
         imageArray.forEach((image) => {
           if (image !== ".gitignore") {
-            var gallery = document.getElementById("galleryList").ul;
+            var gallery = document.getElementById("galleryList");
 
             gallery.innerHTML += "<li><img src='" + dir + image + "'></li>";
           }
