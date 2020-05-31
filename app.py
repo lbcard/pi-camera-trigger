@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     imageList = os.listdir('./static/images/')
-    return render_template('index.html', response="", message="" images=imageList)
+    return render_template('index.html', response="", message="", images=imageList)
 
 
 @app.route('/takeStill')
@@ -16,7 +16,7 @@ def takeStill():
     print("take still triggered")
     photoResult = camCommands.photo()
     imageList = os.listdir('./static/images/')
-    return render_template('index.html', response="Photo Taken", message=photoResult images=imageList)
+    return render_template('index.html', response="Photo Taken", message=photoResult, images=imageList)
 
 
 # make externally visible

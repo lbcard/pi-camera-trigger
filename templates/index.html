@@ -110,12 +110,12 @@
         //   },
         // });
 
-        var images = {{ imageList }};
+        var imageFiles = {{ images }};
         // images.forEach( image => {
         //   $("body").append("<img src='" + dir + filename + "'>");
         // })
 
-        $(images)
+        $(imageFiles)
               .find("a:contains(" + fileextension + ")")
               .each(function () {
                 var filename = this.href
