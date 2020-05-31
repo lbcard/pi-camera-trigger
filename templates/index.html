@@ -53,6 +53,8 @@
           <div id="photoResponse" class="alert" role="alert">
             {{ message }}
           </div>
+
+          <div id="imageGallery"></div>
         </div>
         <div class="col-3"></div>
       </div>
@@ -125,7 +127,7 @@
             var filename = this.href
               .replace(window.location.host, "")
               .replace("http://", "");
-            $("body").append("<img src='" + dir + filename + "'>");
+            $("imageGallery").append("<img src='" + dir + filename + "'>");
           });
       }
 
