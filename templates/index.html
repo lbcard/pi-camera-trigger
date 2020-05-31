@@ -91,14 +91,31 @@
       // }
 
       function imageLoader() {
-        var dir = "{{ url_for('static', filename='/images/') }}";
-        var fileextension = ".jpg";
-        $.ajax({
-          //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-          url: dir,
-          success: function (data) {
-            //List all .png file names in the page
-            $(data)
+        // var dir = "{{ url_for('static', filename='images/') }}";
+        var dir = "{{ url_for('static', filename='images/') }}";
+        // var fileextension = ".jpg";
+        // $.ajax({
+        //   //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+        //   url: dir,
+        //   success: function (data) {
+        //     //List all .png file names in the page
+        //     $(data)
+        //       .find("a:contains(" + fileextension + ")")
+        //       .each(function () {
+        //         var filename = this.href
+        //           .replace(window.location.host, "")
+        //           .replace("http://", "");
+        //         $("body").append("<img src='" + dir + filename + "'>");
+        //       });
+        //   },
+        // });
+
+        var images = {{ imageList }};
+        // images.forEach( image => {
+        //   $("body").append("<img src='" + dir + filename + "'>");
+        // })
+
+        $(images)
               .find("a:contains(" + fileextension + ")")
               .each(function () {
                 var filename = this.href
@@ -106,8 +123,7 @@
                   .replace("http://", "");
                 $("body").append("<img src='" + dir + filename + "'>");
               });
-          },
-        });
+
       }
 
       // messageClass(response);
