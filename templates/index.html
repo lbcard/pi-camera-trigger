@@ -93,7 +93,7 @@
       function imageLoader() {
         // var dir = "{{ url_for('static', filename='images/') }}";
         var dir = "{{ url_for('static', filename='images/') }}";
-        // var fileextension = ".jpg";
+        var fileextension = ".jpg";
         // $.ajax({
         //   //This will retrieve the contents of the folder if the folder is configured as 'browsable'
         //   url: dir,
@@ -111,7 +111,8 @@
         // });
 
         var imageFiles = "{{ images }}";
-        // images.forEach( image => {
+        // imageFiles.forEach( image => {
+        //   &#39;
         //   $("body").append("<img src='" + dir + filename + "'>");
         // })
 
