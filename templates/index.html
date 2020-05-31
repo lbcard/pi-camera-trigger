@@ -110,7 +110,7 @@
         //   },
         // });
 
-        var imageFiles = "{{ images }}";
+        var imageFiles = "{{ images|safe }}";
         // imageFiles.forEach( image => {
         //   &#39;
         //   $("body").append("<img src='" + dir + filename + "'>");
