@@ -38,7 +38,7 @@
       <div class="row">
         <div class="col-3"></div>
         <div class="col-6 centerDiv">
-          <p>Hit the button below to take a picture! (gallery coming soon!)</p>
+          <p>Hit the button below to take a picture!</p>
           <a
             href="/takeStill"
             id="photoBtn"
@@ -54,6 +54,7 @@
             {{ message }}
           </div>
 
+          <h2>Gallery</h2>
           <div id="imageGallery"><ul id="galleryList"></ul></div>
         </div>
         <div class="col-3"></div>
@@ -68,17 +69,6 @@
     <script src="{{ url_for('static', filename='css/bootstrap/js/bootstrap.min.js') }}"></script>
 
     <script>
-      // document
-      //   .getElementById("photoBtn")
-      //   .addEventListener("click", triggerPhoto);
-
-      // function triggerPhoto() {
-      //   var xhttp = new XMLHttpRequest();
-
-      //   xhttp.open("GET", "/takeStill", true); // does work
-      //   xhttp.send();
-      // }
-
       // function messageClass(varResponse) {
       //   if (varResponse === "Photo Taken") {
       //     document.getElementById("photoResponse").style.display = "visible";
@@ -97,21 +87,6 @@
         var dir = "{{ url_for('static', filename='images/imageProxies') }}";
         var mainImageDir = "{{ url_for('static', filename='images') }}";
         var fileextension = ".jpg";
-        // $.ajax({
-        //   //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-        //   url: dir,
-        //   success: function (data) {
-        //     //List all .png file names in the page
-        //     $(data)
-        //       .find("a:contains(" + fileextension + ")")
-        //       .each(function () {
-        //         var filename = this.href
-        //           .replace(window.location.host, "")
-        //           .replace("http://", "");
-        //         $("body").append("<img src='" + dir + filename + "'>");
-        //       });
-        //   },
-        // });
 
         var imageFiles = "{{ images }}";
         var imageArray = imageFiles.split(",");
@@ -132,18 +107,6 @@
               "'></a></li>";
           }
         });
-
-        // console.log("imageArray");
-        // console.log(imageArray);
-
-        // $(imageArray)
-        //   .find("a:contains(" + fileextension + ")")
-        //   .each(function () {
-        //     var filename = this.href
-        //       .replace(window.location.host, "")
-        //       .replace("http://", "");
-        //     $("imageGallery").append("<img src='" + dir + filename + "'>");
-        //   });
       }
 
       // messageClass(response);
