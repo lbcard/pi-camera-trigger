@@ -16,7 +16,7 @@ def index():
 def takeStill():
     print("take still triggered")
     photoResult = camCommands.photo()
-    camCommands.createProxy(str(photoResult[1]) + ".jpg", './static/images')
+    camCommands.createProxy(str(photoResult[1]) + ".jpg", './static/images/')
     imageList = helperFuncs.getFiles('./static/images/imageProxies')
     return render_template('index.html', response="Photo Taken", message=photoResult[0], images=imageList)
 
