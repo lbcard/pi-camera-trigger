@@ -1,23 +1,23 @@
 from flask import Flask, render_template
 import camCommands
-from os import listdir
-import json
+import helperFuncs
+
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    imageList = listdir('./static/images/')
-    return render_template('index.html', response="", message="", images=json.dumps(imageList))
+    imageList = helperFuncs.getFiles('./static/images/')
+    return render_template('index.html', response="", message="", images=imageList)
 
 
 @app.route('/takeStill')
 def takeStill():
     print("take still triggered")
     photoResult = camCommands.photo()
-    imageList = listdir('./static/images/')
-    return render_template('index.html', response="Photo Taken", message=photoResult, images=json.dumps(imageList))
+    imageList = helperFuncs.getFiles('./static/images/')
+    return render_template('index.html', response="Photo Taken", message=photoResult, images=imageList)
 
 
 # make externally visible

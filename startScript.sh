@@ -23,6 +23,8 @@ mkdir
 source ~/Desktop/cam-trigger/pi-camera-trigger-env/bin/activate
 cd ~/Desktop/cam-trigger/pi-camera-trigger
 pip3 install flask
+# pip3 install jinja2 # maybe not needed
+
 # maybe set bashrc bashprofile
 export FLASK_APP=app.py
 flask run --host=0.0.0.0

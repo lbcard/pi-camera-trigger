@@ -110,15 +110,16 @@
         //   },
         // });
 
-        var imageFiles = "{{ images|safe }}";
+        var imageFiles = "{{ images }}";
+        var imageArray = imageFiles.split(",");
         // imageFiles.forEach( image => {
         //   &#39;
         //   $("body").append("<img src='" + dir + filename + "'>");
         // })
 
-        console.log("imageFiles");
-        console.log(imageFiles);
-        $(imageFiles)
+        console.log("imageArray");
+        console.log(imageArray);
+        $(imageArray)
           .find("a:contains(" + fileextension + ")")
           .each(function () {
             var filename = this.href
