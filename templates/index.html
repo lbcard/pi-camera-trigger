@@ -54,7 +54,7 @@
             {{ message }}
           </div>
 
-          <div id="imageGallery"></div>
+          <div id="imageGallery"><ul id="galleryList"></ul></div>
         </div>
         <div class="col-3"></div>
       </div>
@@ -114,21 +114,26 @@
 
         var imageFiles = "{{ images }}";
         var imageArray = imageFiles.split(",");
-        // imageFiles.forEach( image => {
-        //   &#39;
-        //   $("body").append("<img src='" + dir + filename + "'>");
-        // })
 
-        console.log("imageArray");
-        console.log(imageArray);
-        $(imageArray)
-          .find("a:contains(" + fileextension + ")")
-          .each(function () {
-            var filename = this.href
-              .replace(window.location.host, "")
-              .replace("http://", "");
-            $("imageGallery").append("<img src='" + dir + filename + "'>");
-          });
+        imageArray.forEach((image) => {
+          if (image !== ".gitignore") {
+            var gallery = document.getElementById("galleryList").ul;
+
+            gallery.innerHTML += "<li><img src='" + dir + image + "'></li>";
+          }
+        });
+
+        // console.log("imageArray");
+        // console.log(imageArray);
+
+        // $(imageArray)
+        //   .find("a:contains(" + fileextension + ")")
+        //   .each(function () {
+        //     var filename = this.href
+        //       .replace(window.location.host, "")
+        //       .replace("http://", "");
+        //     $("imageGallery").append("<img src='" + dir + filename + "'>");
+        //   });
       }
 
       // messageClass(response);
