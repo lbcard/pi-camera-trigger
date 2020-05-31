@@ -23,6 +23,7 @@ mkdir
 source ~/Desktop/cam-trigger/pi-camera-trigger-env/bin/activate
 cd ~/Desktop/cam-trigger/pi-camera-trigger
 pip3 install flask
+pip3 install pillow
 # pip3 install jinja2 # maybe not needed
 
 # maybe set bashrc bashprofile

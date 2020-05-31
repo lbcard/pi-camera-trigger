@@ -15,3 +15,16 @@
 .centerDiv {
   text-align: left;
 }
+
+.galleryImg img {
+  max-width: 300px;
+  margin: 1em;
+  padding: 1em;
+  transform: rotate(270deg);
+}
+
+#galleryList {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}

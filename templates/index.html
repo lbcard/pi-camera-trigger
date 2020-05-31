@@ -94,7 +94,8 @@
 
       function imageLoader() {
         // var dir = "{{ url_for('static', filename='images/') }}";
-        var dir = "{{ url_for('static', filename='images/') }}";
+        var dir = "{{ url_for('static', filename='images/imageProxies') }}";
+        var mainImageDir = "{{ url_for('static', filename='images') }}";
         var fileextension = ".jpg";
         // $.ajax({
         //   //This will retrieve the contents of the folder if the folder is configured as 'browsable'
@@ -119,7 +120,14 @@
           if (image !== ".gitignore") {
             var gallery = document.getElementById("galleryList");
 
-            gallery.innerHTML += "<li><img src='" + dir + image + "'></li>";
+            gallery.innerHTML +=
+              "<li><a href='" +
+              mainImageDir +
+              image +
+              "'><img class='galleryImg' src='" +
+              dir +
+              image +
+              "'></a></li>";
           }
         });
 
