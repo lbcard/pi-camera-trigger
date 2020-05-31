@@ -1,9 +1,12 @@
 
-# Load py env
-source ~/Desktop/cam-trigger/pi-camera-trigger-env/bin/activate
-cd ~/Desktop/cam-trigger/pi-camera-trigger
 
-# start the webserver
+# Basic start script which works......
+source cam-trigger/pi-camera-trigger-env/bin/activate
+cd ~/Desktop/cam-trigger/pi-camera-trigger/ 
+flask run --host 0.0.0.0 --port 5000
+##########################################
+
+
 
 
 

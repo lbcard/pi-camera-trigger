@@ -76,18 +76,18 @@
       //   xhttp.send();
       // }
 
-      function messageClass(varResponse) {
-        if (varResponse === "Photo Taken") {
-          document.getElementById("photoResponse").style.display = "visible";
-          document.getElementById("photoResponse").className +=
-            " alert-success";
-        } else if (varResponse === "Photo Failed") {
-          document.getElementById("photoResponse").style.display = "visible";
-          document.getElementById("photoResponse").className += " alert-danger";
-        } else {
-          document.getElementById("photoResponse").style.display = "none";
-        }
-      }
+      // function messageClass(varResponse) {
+      //   if (varResponse === "Photo Taken") {
+      //     document.getElementById("photoResponse").style.display = "visible";
+      //     document.getElementById("photoResponse").className +=
+      //       " alert-success";
+      //   } else if (varResponse === "Photo Failed") {
+      //     document.getElementById("photoResponse").style.display = "visible";
+      //     document.getElementById("photoResponse").className += " alert-danger";
+      //   } else {
+      //     document.getElementById("photoResponse").style.display = "none";
+      //   }
+      // }
 
       function imageLoader() {
         var dir = "~/Desktop/cameraShots";
@@ -109,7 +109,7 @@
         });
       }
 
-      messageClass(response);
+      // messageClass(response);
       imageLoader();
     </script>
   </body>
