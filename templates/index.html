@@ -91,7 +91,7 @@
       // }
 
       function imageLoader() {
-        var dir = "/../images/";
+        var dir = "{{ url_for('static', filename='images/') }}";
         var fileextension = ".jpg";
         $.ajax({
           //This will retrieve the contents of the folder if the folder is configured as 'browsable'
