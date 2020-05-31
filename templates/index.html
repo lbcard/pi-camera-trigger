@@ -54,7 +54,7 @@
             {{ message }}
           </div>
 
-          <div id="imageGallery"><ul class="galleryList"></ul></div>
+          <div id="imageGallery"><ul id="galleryList"></ul></div>
         </div>
         <div class="col-3"></div>
       </div>
@@ -118,7 +118,7 @@
 
         imageArray.forEach((image) => {
           if (image !== ".gitignore") {
-            var gallery = document.getElementsByClassName("galleryList");
+            var gallery = document.getElementsById("galleryList");
 
             gallery.innerHTML +=
               "<li><a href='" +
