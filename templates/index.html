@@ -60,6 +60,10 @@
 
     <script src="" async defer></script>
     <script src="{{ url_for('static', filename='css/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script>
       // document
       //   .getElementById("photoBtn")
@@ -85,7 +89,28 @@
         }
       }
 
+      function imageLoader() {
+        var dir = "~/Desktop/cameraShots";
+        var fileextension = ".jpg";
+        $.ajax({
+          //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+          url: dir,
+          success: function (data) {
+            //List all .png file names in the page
+            $(data)
+              .find("a:contains(" + fileextension + ")")
+              .each(function () {
+                var filename = this.href
+                  .replace(window.location.host, "")
+                  .replace("http://", "");
+                $("body").append("<img src='" + dir + filename + "'>");
+              });
+          },
+        });
+      }
+
       messageClass(response);
+      imageLoader();
     </script>
   </body>
 </html>
