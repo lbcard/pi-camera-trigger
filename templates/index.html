@@ -93,13 +93,16 @@
 
         imageArray.forEach((image) => {
           if (image !== ".gitignore") {
+            var mainImage = image.slice(0, -10);
+
             var gallery = document.getElementById("galleryList");
 
             gallery.innerHTML +=
               "<li><a href='" +
               mainImageDir +
               "/" +
-              image +
+              mainImage +
+              ".jpg" +
               "'><img class='galleryImg' src='" +
               dir +
               "/" +
